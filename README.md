@@ -26,10 +26,13 @@ morale improves.
 * Firmware updates are signed and look like the following:
   * indication.16008211.0 -- Checksum?
   * update/42490971.bin -- Unknown
-  * update/42615022_CPU.bin -- Unknown.. Likely encrypted QNX filesystem
+  * update/42615022_CPU.bin -- Unknown.. Likely encrypted QNX IFS filesystem
   * update/42615022.mnf -- Unknown.. Likely some manifest of what's in update package
   * update/42615022_OP.bin -- Unknown.. Likely more encrypted QNX updates
   * update/42615022.smd -- PEM Encryption keys, public. Checksums, sha256WithRSAEncryption
+* QNX IFS filesystems can be extracted, but since these are encrypted, the encryption would need to be broken first.
+  * Private keys must exist on the head unit, and need extracted
+  * Tools like https://github.com/askac/dumpifs exist
 
 ### Radio Reboot
 
