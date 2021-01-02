@@ -95,7 +95,7 @@ To get this update, you have to head to the dealership, ask your service technic
   * Function: Generally "Programming"
   * Programming Type: "Normal"  ("VCI" is some special GM software drop for individual vehicles)
   * RPO Codes - Select the RPO code based on what is in your glovebox.
-    * RPO IOB == Select this if your glovebox sticker lists "RPO"
-    * RPO -IOB == Select this if your globebox sticker *doesn't* list "RPO"
+    * RPO IOB == Select this if your glovebox sticker lists "IOB"
+    * RPO -IOB == Select this if your globebox sticker *doesn't* list "IOB"
 * Follow the instructions *carefully* and perform all steps tds2web instructs you to.
 * Don't interrupt programming!
