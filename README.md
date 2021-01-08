@@ -45,9 +45,18 @@ If your head unit becomes locked up, press and hold "skip forward" and "home" fo
 * Radio performs a DNS lookup of vtmpub.oboservices.mobi
   * CNAME *USED* to be vtm-oboservices.nam1.lbx.gm.com (66.235.235.112, "Quality Technology Services")
   * CNAME *NOW* rcms-na-oboservices.nam1.lbx.gm.com (198.208.178.32, GM Subnet)
-* TLS two way handshake, need a valid client TLS certificate to communicate
+* TLS ECDSA certificate required.  No matching ciphers for RSA certificates.
+  * TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A
+  * TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA (secp256r1) - A
+  * TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
+  * TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A
+  * TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA (secp256r1) - A
+  * TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
+  * TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA (secp256r1) - C
+* Vehicle checks the remote server aginst a trusted pool of GM CA's
+  * tlsv1 alert unknown ca:SSL alert number 48) while SSL handshaking
 * Radio requests information from server (likely VIN tied)
-* TLS guards from seeing any information about this request
+* TLS guards from seeing any information about this request :-(
 
 ### Man in the middle
 
