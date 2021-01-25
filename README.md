@@ -13,6 +13,19 @@ morale improves.
 * [2020 bolts have a new battery chemistry, and are replacable in five sections](https://techlink.mynetworkcontent.com/wp-content/uploads/2019/11/GM_TechLink_20_Mid-October_2019.pdf)
 * [How to tell if the wiring harness is seated all the way](https://techlink.mynetworkcontent.com/wp-content/uploads/2020/02/GM_TechLink_03_February_2020.pdf)
 
+## Hidden functions
+
+* Radio Reboot
+  * Press and hold HOME + Fast Forward to reboot the infotainment.
+  * This is a hardware feature and will solve any of the common radio "lockups"
+* Service Mode
+  * The shop manual documents a "Service Mode" for troubleshooting.
+  * With the vehicle off, this is activated by holding the power button
+    for 5 seconds with your foot *not* on any pedals.
+  * The car will enter a "not ready" state, but systems will be online.
+  * Press the power button again to exit.
+  * No "hidden menus" have been found yet.
+
 ## Radio
 
 ![Bolt EV Radio Control Unit](images/radio.jpg)
@@ -57,10 +70,6 @@ morale improves.
 * 2019, 2020 both have a differing part number for the display.
   * It could be minor mechanical differences however?
 * The Bolt EV service manual is the same? per GM for 2017-2019 so the pinouts may be identical?
-
-### Radio Reboot
-
-If your head unit becomes locked up, press and hold "skip forward" and "home" for 5 seconds.
 
 ### Radio Firmware Updates
 
