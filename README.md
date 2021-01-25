@@ -48,6 +48,16 @@ morale improves.
     * 2017,2018 - 42556932
   * Seemingly just a "Serial LVDS" touch screen and display?
 
+### Upgradability
+
+> Purely theoretical. Using the wrong parts may cause damage!
+
+* Since the 2017 + 2018 model years used the same display, the radio receiver should be electrically "swappable" between them.
+  * Obviously the ECU might have something to say about a non-matching radio control unit.
+* 2019, 2020 both have a differing part number for the display.
+  * It could be minor mechanical differences however?
+* The Bolt EV service manual is the same? per GM for 2017-2019 so the pinouts may be identical?
+
 ### Radio Reboot
 
 If your head unit becomes locked up, press and hold "skip forward" and "home" for 5 seconds.
