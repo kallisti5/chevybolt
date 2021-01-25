@@ -15,24 +15,38 @@ morale improves.
 
 ## Radio
 
-* Radio Receiver S-band HD 42583079
-* Chevy Bolt EV OEM Radio Navigation 10" screen 42583079
+![Bolt EV Radio Control Unit](images/radio.jpg)
+
+* Radio Receiver S-band HD
+  * GM Part Name: "Radio Control Unit"
+  * Model Years
+    * 2020 - 42728517 aka 42724911 / 42743929
+    * 2019 - 42680220 aka 42676913 / 42746460
+    * 2018 - 42670713 aka 42525185 / 42621253 / 42649077
+    * 2017 - 42671556 aka 42571029 / 42583079
   * Made by LG Innotek for GM
   * Model LC10S , LC10-S , LC10SB , LC10-SB
   * FCC "Silver box radio" https://fccid.io/BEJLC10SB
   * Supports Bluetooth, 2.4Ghz WIFI and 5 Ghz Wifi.
   * Wireless Android auto requires 5 Ghz wifi, so the head unit can "technically" be upgraded to it in the future.
-* Seems to be QNX based
-* Firmware updates are signed and look like the following:
-  * indication.16008211.0 -- Checksum?
-  * update/42490971.bin -- Unknown
-  * update/42615022_CPU.bin -- Unknown.. Likely encrypted QNX IFS filesystem
-  * update/42615022.mnf -- Unknown.. Likely some manifest of what's in update package
-  * update/42615022_OP.bin -- Unknown.. Likely more encrypted QNX updates
-  * update/42615022.smd -- PEM Encryption keys, public. Checksums, sha256WithRSAEncryption
-* QNX IFS filesystems can be extracted, but since these are encrypted, the encryption would need to be broken first.
-  * Private keys must exist on the head unit, and need extracted
-  * Tools like https://github.com/askac/dumpifs exist
+  * Seems to be QNX based
+  * Firmware updates are signed and look like the following:
+    * indication.16008211.0 -- Checksum?
+    * update/42490971.bin -- Unknown
+    * update/42615022_CPU.bin -- Unknown.. Likely encrypted QNX IFS filesystem
+    * update/42615022.mnf -- Unknown.. Likely some manifest of what's in update package
+    * update/42615022_OP.bin -- Unknown.. Likely more encrypted QNX updates
+    * update/42615022.smd -- PEM Encryption keys, public. Checksums, sha256WithRSAEncryption
+  * QNX IFS filesystems can be extracted, but since these are encrypted, the encryption would need to be broken first.
+    * Private keys must exist on the head unit, and need extracted
+    * Tools like https://github.com/askac/dumpifs exist
+* Chevy Bolt EV OEM Radio Navigation 10" screen
+  * GM Part Name: "GPS Navigation System"
+  * Model Years
+    * 2020 - 42620584
+    * 2019 - 42662676
+    * 2017,2018 - 42556932
+  * Seemingly just a "Serial LVDS" touch screen and display?
 
 ### Radio Reboot
 
