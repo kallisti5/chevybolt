@@ -26,6 +26,52 @@ morale improves.
   * Press the power button again to exit.
   * No "hidden menus" have been found yet.
 
+## Battery Recall
+
+As of late 2020, NHTSA and GM began noticing an increasing trend of battery fires
+unrelated to damage, accident, or abuse where vehicles charging quietly in owners garages
+overnight, or had finished charging recently. The issue begins with smoke exiting
+the highest point in the battery pack (the service disconnect under the rear seat).
+
+A "final" software fix was released in April / May for impacted Bolt EV vehicles. (NHTSA 20V701)
+
+After the final software fix, additional vehicles suffered the same fault prompting
+another recall. (NHTSA 21V56)
+
+On August 20th, 2021, the overall cause of fires reported by GM are two manufacturing
+defects within the LG produced LiPo cells:
+
+* A torn anode tab
+* A folded separator
+
+The combonation of these two defects is speculated to create an internal short within
+the battery during normal cycling (expansion, contraction, etc) between the anode
+and cathode resulting in a fire developing. Given the close proximity of cells, the fire
+rapidly consumes the entire pack.
+
+[allev.info list of known Bolt EV fires](https://allev.info/2021/07/list-of-known-chevy-bolt-fires/)
+
+### History
+
+* November 13th, 2020 - NHTSA 20V701 (aka, the failed software fix)
+  * Battery may catch fire on 2017 - early 2019 Bolt EV's
+  * Intrem software fix to limit battery SoC to 90% available immeadiately
+  * Don't charge over 90% SoC until a "final" software fix is available
+  * "Final" software fix was delivered for 2019 Vehicles on April 29th, 2021
+  * "Final" software fix was delivered for all 2017-2019 Vehicles on May 26th, 2021
+  * "Final" software fix includes improved monitoring, and attempts to set off the car alarm in the event of a thermal runaway.
+* July 23rd, 2021 - NHTSA 21V56
+  * Battery may catch on fire on 2017 - early 2019 Bolt EV's
+  * Don't charge over 90% SoC or under 70 Miles of range until solution available
+    * A trend is noticed of the issue happening on vehicles discharged < 30% and charged to full which aligns to GM's temporary recommendations
+  * Owners can expect a replacement of all battery modules when available
+    * GM announced the battery warranty "restarts" on recall replacement (8 year, 100,000 mile)
+    * GM announced the capacity of the new cells would be 8% greater
+* August 20th, 2021 - NHTSA 21V65
+  * Battery may catch on fire on all 2019-2022 Bolt EV's and EUV's
+  * Don't charge over 90% SoC or under 70 Miles of range until solution available
+  * Owners can expect a replacement of some battery modules when available
+
 ## Radio
 
 ![Bolt EV Radio Control Unit](images/radio.jpg)
