@@ -5,6 +5,33 @@ This is a small collection of things i've discovered about the Chevy Bolt EV.
 We haven't seen any OTA radio updates to the head unit, beatings will continue until
 morale improves.
 
+## OnStar
+
+OnStar is a built-in 4G LTE-based data service which also lets you make phone calls to talk to OnStar representitives.
+
+### OnStar Service Plans
+
+Every Bolt EV comes with at least 5 years free of "EV Mobile Command". This lets you control the car, and see battery state of charge through the built-in 4G LTE modem.
+
+#### OnStar API 8-request Lockout
+
+After 8 requests for diagnostic information (battery state of charge, charging status, etc), you are no longer allowed to query this information until your vehicle is physically powered on again.
+
+> This was tested from the 5-year free "EV Mobile Command" package. It is possible this limitation doesn't apply to paid OnStar plans... but hasn't been tested yet. GM doesn't document any of this.
+
+This was discovered via [onstar2mqtt](https://github.com/michaelwoods/onstar2mqtt/issues/103).
+
+Onstar2mqtt will request diagnostic health once per hour, after 8 hours it begins failing with "error: Error" from Onstar.
+Powering on your vehicle will allow functionality to resume.
+
+**Observations:**
+
+* Unlocking and relocking the doors via remote - get_diagnostic request still failing
+* Physically opening and closing doors - get_diagnostic request still failing
+* Issuing vehicle commands through API (lock, unlock) - Functional, but get_diagnostic request still failing afterwards
+* Plugging vehicle into a Level 2 charger - get_diagnostic request still failing
+* Getting into vehicle, powering car on - get_diagnostic requests working again
+
 ## Dealer TechLink
 
 * [How to fix the Bolts tires](https://techlink.mynetworkcontent.com/wp-content/uploads/2018/03/GM_TechLink_05_March_2018.pdf)
