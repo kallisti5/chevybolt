@@ -123,9 +123,12 @@ rapidly consumes the entire pack.
   * Don't park inside a garage or other structure until solution available
   * Don't charge over 90% SoC or under 70 Miles of range until solution available
   * Owners can expect a replacement of some battery modules when available
-
-As of August 31st, 2021, Detroit Free Press reported that GM is "not confident their existing LG battery stock is defect free".
-No timeline has been provided to Chevy customers on when the new replacement battery modules will be available.
+* **November, 2021**
+  * GM begins rolling out replacement batteries to priority vehicles.
+    * Early 2019 Bolt EV's get the highest priority
+* **December, 2021**
+  * GM begins rolling out replacement batteries as they become available
+  * A software workaround is made available to reduce SoC to 80% on vehicles unable to immediately get a battery replacement.
 
 ## Radio
 
@@ -211,10 +214,12 @@ To get this update, you have to head to the dealership, ask your service technic
 
 ### Terms
 
-* SAE-J2534 - All new vehicles need to support these standards to reprogram systems which can include emmissions control changes.
-* Tech2 - An older diagnostic system for GM vehicles. You don't need to mess with this.
+* SAE-J2534 - All new vehicles need to support these standards to reprogram systems which can include emmissions control changes
+* Tech2 - An older diagnostic system for GM vehicles. You don't need to mess with this
 * GDS2 - GM's current diagnostic system, which supports firmware updates via SAE-J2534
-* Operating System - Base operating system of device.
+* TIS2WEB - A web-based java diagnostic and repair system. Replaced by Techline Connect
+* Techline Connect - A java desktop diagnostic and repair system
+* Operating System - Base operating system of device
 * Calibrations - Applied on top of base operating system (like updates, patches)
 
 ### Tools Needed
@@ -223,6 +228,7 @@ To get this update, you have to head to the dealership, ask your service technic
 * Internet connection
 * [GDS2 Adapter](http://www.vxdiagshop.com/wholesale/vxdiag-vcx-nano-for-gm-opel-wifi-version.html) -- $105
   * This is the one I use, it works fine and is a cheap Chinese clone.
+  * **DOES NOT WORK WELL WITH THE NEW TECHLINE CONNECT!**
 * An account on https://www.acdelcotds.com/ and $40 per VIN gives you two years of firmware updates
   * You can search for updates for your vehicle before purchase by using [tis2web](https://tis2web.service.gm.com/tis2web)
   * This is the same tool Chevy dealers use. You can reprogram / re-vin an ECU, etc.
