@@ -13,16 +13,11 @@ OnStar is a built-in 4G LTE-based data service which also lets you make phone ca
 
 Every Bolt EV comes with at least 5 years free of "EV Mobile Command". This lets you control the car, and see battery state of charge through the built-in 4G LTE modem.
 
-#### OnStar API 8-request Lockout
+### OnStar Instability
 
-After 8 requests for diagnostic information (battery state of charge, charging status, etc), you are no longer allowed to query this information until your vehicle is physically powered on again.
+OnStar in 2017-2019 Bolt EV's has a habbit of going into periods of failing to serve requests for diagnostic information.
 
-> This was tested from the 5-year free "EV Mobile Command" package. It is possible this limitation doesn't apply to paid OnStar plans... but hasn't been tested yet. GM doesn't document any of this.
-
-This was discovered via [onstar2mqtt](https://github.com/michaelwoods/onstar2mqtt/issues/103).
-
-Onstar2mqtt will request diagnostic health once per hour, after 8 hours it begins failing with "error: Error" from Onstar.
-Powering on your vehicle will allow functionality to resume.
+The end result is the battery SoC stops refreshing in the myChevrolet application, and API calls (for example via [onstar2mqtt](https://github.com/michaelwoods/onstar2mqtt) stop functioning until the vehicle is physically powered on again.
 
 **Observations:**
 
@@ -31,6 +26,32 @@ Powering on your vehicle will allow functionality to resume.
 * Issuing vehicle commands through API (lock, unlock) - Functional, but get_diagnostic request still failing afterwards
 * Plugging vehicle into a Level 2 charger - get_diagnostic request still failing
 * Getting into vehicle, powering car on - get_diagnostic requests working again
+
+After extensive trial-and-error, there doesn't seem to be a fixed set of conditions leading to this event. There also is no fix beyond physically powering the vehicle on via the start button.
+
+### Disabling OnStar
+
+OnStar can be disabled by powering the vehicle off (important per the repair manual, it has a battery) and pulling the OnStar fuse from the fuse panel under the drivers steering wheel.
+Once disabled, [a blank filler plate](https://thingiverse.com/thing:5199130) can be 3d printed to replace the physical OnStar buttons.
+
+Overall, the vehicle works as expected with the OnStar module disabled except for one problem. The in-vehicle microphone for bluetooth telephone calls will no longer function.
+The microphone runs through the OnStar unit which seemingly amplifies or re-encodes the audio signal for the radio.
+
+It might be possible to "bridge" the microphone directly to the radio unit via the following pins of OnStar X2 connector:
+
+* 9 B24 Cellular Phone Microphone +
+* 10 B24 Cellular Phone Microphone ground
+
+* 6 Radio / Navigation Microphone +
+* 12 Radio / Navigation Microphone -
+* 5 Radio / Navigation Microphone ground
+
+Connecting 9/10 to 6/12 might provide a functional in-vehicle bluetooth audio experience. Untested.
+
+### Physical Access to OnStar module
+
+The OnStar module (K73 Telematics Communication Interface Control) is physically located directly behind the central infotainment screen.
+Access is not easy as you will need to remove the dash trim (containing the AC vents), then unscrew and remove the infotainment screen assembly.
 
 ## Dealer TechLink
 
