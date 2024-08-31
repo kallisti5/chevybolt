@@ -164,6 +164,7 @@ rapidly consumes the entire pack.
     * 2019 - 42662676
     * 2017,2018 - 42556932
   * Seemingly just a "Serial LVDS" touch screen and display?
+  * FM antenna is integrated into the rear window, with a connection via a three-pin female connector (only one pin is used) running to the FM amplifier near the middle of the top of the hatch just above the glass (visible once the plastic inner shroud is removed).  Technicians replacing the rear glass may forget to make the antenna connection, resulting in very poor FM reception.
 
 ### Upgradability
 
