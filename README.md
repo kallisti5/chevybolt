@@ -72,7 +72,19 @@ Access is not easy as you will need to remove the dash trim (containing the AC v
     for 5 seconds with your foot *not* on any pedals.
   * The car will enter a "not ready" state, but systems will be online.
   * Press the power button again to exit.
-  * No "hidden menus" have been found yet.
+* Debug Menu
+  * On 2017-2021 model units, there exists a hidden debug menu that is
+    locked with a passcode. You can access this menu by tapping the empty
+    area in the apps screen under Gallery 12 times. The code that will unlock
+    all (known) menus is '1029475638185'. Upon hitting OK, there won't be any
+    immediate indication that anything has changed. Go to the settings menu and
+    scroll all the way down. There will be three new menus with debugging functions.
+  * '20150105' and '20150106' are codes that also work but will give you less menus.
+  * Most of these functions either don't do anything or crash the radio.
+  * These menus will disappear once the radio is rebooted
+  * It is unknown if anything here could result in hacking into the radio's software.
+    I believe this is uncharted territory though, something could exist!
+  * These codes were found in LG's Open Source Software.
 
 ## Battery Recall
 
